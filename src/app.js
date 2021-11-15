@@ -27,6 +27,12 @@ app.get("", (req, res) => {
   });
 });
 
+app.get('/products', (req, res) => {
+  res.send({
+    products: [],
+  })
+})
+
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About",
@@ -44,27 +50,40 @@ app.get("/help", (req, res) => {
 app.get("/weather", (req, res) => {
   if (!req.query.address) {
     return res.send({
-      error: "You must provide a search term",
+      error: "You must provide an address",
     });
-  }
+  } else {
 
-  geocode(req.query.address, (error, { latitude, longitude, location } = {}) => {
-    if (error) {
-      return res.send({ error });
-    }
-
-    forecast(latitude, longitude, (error, forecastData) => {
+    geocode(req.query.address, (error, { latitude, longitude,location } = {}) => {
       if (error) {
         return res.send({ error });
-      }      
-      res.send({
-        // forecast: forecastData,
-        location,
-        address: req.query.address,
+      }
+      
+      forecast(latitude, longitude, (error, forecastData) => {
+        if (error) {
+          return res.send({ error });
+        }   
+        res.send({
+          forecast: forecastData,
+          location,
+          address: req.query.address,
+        });
+           
+      //   res.send({
+      //     description: forecastData.description,
+      //     temp: forecastData.temp,
+      //     humidity: forecastData.humidity,
+      //     wind: forecastData.wind,
+      //     address: req.query.address,
+      //   });
       });
-    });
-  });
-});
+    })
+  }
+
+})
+
+  
+
 
 app.get("/help/*", (req, res) => {
   res.render("404", {

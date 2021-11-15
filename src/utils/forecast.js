@@ -9,11 +9,16 @@ const forecast = (latitude, longitude, callback) => {
             callback("Unable to connect to weather service!", undefined);
         }  else if (body.cod !== 200) {
             callback("Unable to locate location", undefined);
-        }  else {
-            console.log(body.weather[0].description);
-            callback(
-              `It is currently ${body.main.temp} degrees celcius out.\nThe humidity is ${body.main.humidity}% and the wind speed is ${body.wind.speed} kph.\n`
-            );
+        } else {
+            // callback(undefined, {
+            //     description: body.weather[0].description,
+            //     temp: body.main.temp,
+            //     humidity: body.main.humidity,
+            //     wind: body.wind.speed,
+            // })
+
+            callback(undefined, `${body.weather[0].description}. It is currently ${body.main.temp} degrees celcius out. The humidity is ${body.main.humidity}% and the wind speed is ${body.wind.speed} kph. `
+        );
         }
     });
 }
