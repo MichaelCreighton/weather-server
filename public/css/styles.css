@@ -39,3 +39,20 @@ footer {
     padding: 16px 0;
     text-align: center;
 }
+
+input {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 8px;
+
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: #FFF;
+    padding: 8px;
+    border-radius: 5px;
+
+}
