@@ -13,14 +13,18 @@
 <body>
     <div class="main-content">
         {{>header}}
-        <h2>Weather Weather Weather</h2>
-        <p>Use this site to get your weather...</p>
-        <form action="">
-            <input type="text" placeholder="Location">
-            <button>Search</button>
-        </form>
-        <p id='msg1'></p>
-        <p id='msg2'></p>
+        <div class="contentBox">
+            <h2>Weather Weather Weather</h2>
+            <form>
+                <input type="text" placeholder="Location">
+                <button>Search</button>
+            </form>
+            <section class="card">
+                <h3 id='msg1'></h3>
+                <p id='msg2'></p>
+            </section>
+
+        </div>
     </div>
     {{>footer}}
     <script src="/js/app.js"></script>

@@ -17,7 +17,7 @@ const forecast = (latitude, longitude, callback) => {
             //     wind: body.wind.speed,
             // })
 
-            callback(undefined, `${body.weather[0].description}. It is currently ${body.main.temp} degrees celcius out. The humidity is ${body.main.humidity}% and the wind speed is ${body.wind.speed} kph. `
+            callback(undefined, `${body.weather[0].description}. It is currently ${body.main.temp} degrees celcius outside. The humidity is ${body.main.humidity}% and the wind speed is ${body.wind.speed} kph. `
         );
         }
     });

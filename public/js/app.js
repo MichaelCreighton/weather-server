@@ -1,4 +1,3 @@
-console.log("client side js file loaded!");
 
 const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
@@ -20,7 +19,7 @@ weatherForm.addEventListener("submit", (e) => {
         } else {
           msgOne.textContent = data.location;
           msgTwo.textContent = data.forecast;
-          
+
           // clear input upon successful fetch
           weatherForm.reset();
         }

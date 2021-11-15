@@ -27,9 +27,15 @@ h1 {
 }
 
 header a {
-    color: #888888;
+    color: cornflowerblue;
     margin-right: 16px;
     text-decoration: none;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 footer {
@@ -40,11 +46,27 @@ footer {
     text-align: center;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 150px;
+    border: 1px solid #888888;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #888888;
+    padding: 10px;
+}
+
+form {
+    padding: 50px 0 50px 0;
+}
 input {
     border: 1px solid #CCCCCC;
     border-radius: 5px;
     padding: 8px;
-
+    box-shadow: 3px 3px 10px #888888;
+    
 }
 
 button {
@@ -53,6 +75,8 @@ button {
     background: #888888;
     color: #FFF;
     padding: 8px;
+    margin-left: 10px;
     border-radius: 5px;
+    box-shadow: 3px 3px 10px #888888;
 
 }

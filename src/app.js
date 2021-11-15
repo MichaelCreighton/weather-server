@@ -42,7 +42,7 @@ app.get("/about", (req, res) => {
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
-    message: "You need somebody to love?",
+    message: "You need somebody?",
     name: "Michael Creighton",
   });
 });
