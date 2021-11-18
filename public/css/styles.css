@@ -2,12 +2,21 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    color: #333333;
+    /* color: #006666; */
+    color: cornflowerblue;
     font-family: arial;
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
+/* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,255,1) 11.3%, rgba(6,255,255,1) 41.2%, rgba(0,216,216,1) 77.8% ); */
+
+/* background-image: linear-gradient( 109.9deg,  rgba(251,189,100,1) 1.8%, rgba(255,207,139,1) 95.4% ); */
+
+background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+
+
 }
+
 .portrait {
     width: 250px;
     border-radius: 10px;
@@ -22,12 +31,13 @@ header {
 }
 
 h1 {
+    /* color: cornflowerblue; */
     font-size: 64px;
     margin-bottom: 16px;
 }
 
 header a {
-    color: cornflowerblue;
+    color: #006666;
     margin-right: 16px;
     text-decoration: none;
 }
@@ -47,6 +57,7 @@ footer {
 }
 
 .card {
+    background: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -62,6 +73,7 @@ form {
     padding: 50px 0 50px 0;
 }
 input {
+    background: #FFF;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
     padding: 8px;
@@ -72,7 +84,7 @@ input {
 button {
     cursor: pointer;
     border: 1px solid #888888;
-    background: #888888;
+    background: cornflowerblue;
     color: #FFF;
     padding: 8px;
     margin-left: 10px;
