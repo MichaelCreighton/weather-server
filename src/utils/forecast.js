@@ -1,8 +1,8 @@
 const request = require("postman-request");
-const OPENWEATHERMAP_API_KEY = process.env.OPENWEATHERMAP_API_KEY;
+// const OPENWEATHERMAP_API_KEY = process.env.OPENWEATHERMAP_API_KEY;
 
 const forecast = (latitude, longitude, callback) => {
-  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=${OPENWEATHERMAP_API_KEY}`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=52efe3cc9ed6342b21396cfc63ac528c`;
 
   request({ url, json: true }, (error, { body }) => {
     if (error) {
